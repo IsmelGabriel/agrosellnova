@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrosell Nova - productos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!--(ALOJADOR DE IMAGENES)
+    
+   https://i.ibb.co/
+
+-->
+
+<!-- Barra superior -->
+<header class="top-bar">
+    <div class="header-content">
+        <img src="https://i.ibb.co/cvj3qCk/agrosell-logo-removebg-preview-1.png" alt="Agrosell Nova" class="logo">
+        <h1 class="menu-title">AGROSELL NOVA</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar....">
+            <button><i>🔎</i></button>
+        </div>
+        <span class="notification">
+            <button id="notificationButton" style="background-color: transparent; border: none; cursor: pointer;">
+                <i class="icon">🔔</i>
+            </button>
+        </span>
+            <span class="username"><a href="index.html" class="username">log in / log out</a></span>
+    </div>
+</header>
+
+<header id="top"> </header>
+
+<!-- Segunda barra -->
+<nav class="menu-bar">
+    <ul>
+        <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="categorias.html"><i class="fas fa-list"></i> Categorías</a></li>
+        <li><a href="reservas.html"><i class="fas fa-bookmark"></i> Reservas</a></li>
+        <li><a href="#top"><i class="fas fa-box icon"></i> Productos</a></li>
+        <li><a href="about us.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li><a href="#help"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Título de la página -->
+    <section class="producto-titulo">
+        <h1>¡Todos los productos que buscas están aquí!</h1>
+    </section>
+
+    <!-- Filtros de productos -->
+    <section class="filtra-productos">
+        <form action="productos.html">
+            <button type="submit">Filtrar por</button>
+            <label for="producto">Producto:</label>
+            <input type="text" name="producto" id="nombre_producto" placeholder="Ej: Manzanas" required>
+            <label for="producto_publicado">Desde: </label>
+            <input type="date" name="Desde" id="producto_publicado">
+        </form>
+    </section>
+
+    <!-- Lista de productos -->
+    <section id="productos" class="image-info-section">
+        <div class="image-container">
+            <img src="https://elegifruta.com.ar/wp-content/uploads/2017/07/manzana_roja.jpg" alt="Manzanas">
+            <div class="image-text">
+                <h3>Manzanas</h3>
+                <p>Frescas manzanas recién cultivadas listas para la venta.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbX9gFrf58ISObV22EdoxVoz0mLj86TGdatw&s" alt="Plátanos">
+            <div class="image-text">
+                <h3>Plátanos</h3>
+                <p>Plátanos recién cosechados de alta calidad.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLBJnT6pOa7uO_zmh2PRYykgMDpbFBqkv0wA&s" alt="Naranjas">
+            <div class="image-text">
+                <h3>Naranjas</h3>
+                <p>Naranjas frescas listas para llevar a tu mesa.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKbm32CkT22dq1AfiSNpY-G1s6kr41nR1vEQ&s" alt="Tomates">
+            <div class="image-text">
+                <h3>Tomates</h3>
+                <p>Tomates jugosos y saludables, recién cosechados.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIto6jsCDgXTFLiLj6xRTbXysVAEW7S-nQCQ&s" alt="Cebollas">
+            <div class="image-text">
+                <h3>Cebollas</h3>
+                <p>Cebollas frescas, ideales para cualquier receta.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Pie de página -->
+<footer>
+    <div class="footer-content">
+        <h3>¿Cómo podemos ayudarte?</h3>
+        <p>Contáctanos en cualquier momento.</p>
+        <p>
+            <a href="inicio.html" class="pie-pagina">Inicio</a> |
+            <a href="about us.html" class="pie-pagina">Sobre nosotros</a> |
+            <a href="productos.html" class="pie-pagina">Productos</a> |
+            <a href="#ayuda" class="pie-pagina">Ayuda</a> |
+            <a href="mapa.html" class="pie-pagina">Mapa del sitio</a>
+        </p>
+        <p>&copy; 2024.</p>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('notificationButton').addEventListener('click', function() {
+            alert("Notificaciones");
+        });
+
+        window.addEventListener("scroll", function () {
+            const menuBar = document.querySelector(".menu-bar");
+            if (window.scrollY > 50) {
+                menuBar.classList.add("scrolled");
+            } else {
+                menuBar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>

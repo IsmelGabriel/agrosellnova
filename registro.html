@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<!-- Barra superior -->
+    <header class="top-bar">
+        <div class="header-content">
+            <img src="https://i.ibb.co/WBZKn6d/2-removebg-preview.png" alt="AgroSell Nova" class="logo">
+            <h1 class="menu-title">AGROSELL NOVA</h1>
+        </div>
+        </div>
+    </header>
+    <header id="inicio"> </header>
+
+    <main class="login-container">
+        <section class="login-container">
+            <div class="login-info">
+                <h2>Crear cuenta</h2>
+                <form id="loginForm" action="inicio.html" method="get">
+                    <div class="login-inputs">
+
+                        <label for="correo" class="index-text">Email</label>
+                        <input type="text" id="email" placeholder="Email" required>
+
+                        <label for="documento" class="index-text">Documento</label>
+                        <input type="text" id="documento" placeholder="Documento" required>
+
+                        <label for="usuario"
+                        class="index-text" >Usuario</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+
+                        <label for="password" class="index-text">Contraseña</label>
+                        <input type="password" id="password" placeholder="Contraseña" required minlength="6">
+
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" class="iniciar-sesion">Crear cuenta</button>
+                        <a href="index.html" class="login-button">Iniciar sesion</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

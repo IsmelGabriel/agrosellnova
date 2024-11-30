@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrosell Nova - categorias</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!--(ALOJADOR DE IMAGENES)
+    
+   https://i.ibb.co/
+
+-->
+
+<!-- Barra superior -->
+<header class="top-bar">
+    <div class="header-content">
+        <img src="https://i.ibb.co/cvj3qCk/agrosell-logo-removebg-preview-1.png" alt="Agrosell Nova" class="logo">
+        <h1 class="menu-title">AGROSELL NOVA</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar....">
+            <button><i>🔎</i></button>
+        </div>
+        <span class="notification">
+            <button id="notificationButton" style="background-color: transparent; border: none; cursor: pointer;">
+                <i class="icon">🔔</i>
+            </button>
+        </span>
+            <span class="username"><a href="index.html" class="username">log in / log out</a></span>
+    </div>
+</header>
+
+<header id="top"> </header>
+
+<!-- Segunda barra -->
+<nav class="menu-bar">
+    <ul>
+        <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#top"><i class="fas fa-list"></i> Categorías</a></li>
+        <li><a href="reservas.html"><i class="fas fa-bookmark"></i> Reservas</a></li>
+        <li><a href="productos.html"><i class="fas fa-box icon"></i> Productos</a></li>
+        <li><a href="about us.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li><a href="#help"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+    </ul>
+</nav>
+
+<!-- Sección de Categorías -->
+<main class="categorias-container">
+        <!-- Título de la sección-->
+    <h1 class="categorias-titulo">Explora nuestras categorías</h1>
+    <section class="categorias-section">
+        <div class="categoria-item">
+            <img src="https://i.ibb.co/nnM0VZN/Colorful-Illustrative-Organic-Grocery-Online-Shop-Logo-removebg-preview-1.png" alt="Frutas">
+            <h3>Frutas</h3>
+            <p>Explora nuestras frutas frescas y orgánicas.</p>
+            <a href="productos.html#frutas_section"  class="btn-categoria">Ver más</a>
+        </div>
+        <div class="categoria-item">
+            <img src="https://i.ibb.co/nnM0VZN/Colorful-Illustrative-Organic-Grocery-Online-Shop-Logo-removebg-preview-1.png" alt="Verduras">
+            <h3>Verduras</h3>
+            <p>Descubre las mejores verduras recién cosechadas.</p>
+            <a href="productos.html#verduras_section" class="btn-categoria">Ver más</a>
+        </div>
+        <div class="categoria-item">
+            <img src="https://i.ibb.co/nnM0VZN/Colorful-Illustrative-Organic-Grocery-Online-Shop-Logo-removebg-preview-1.png" alt="Granos">
+            <h3>Granos</h3>
+            <p>Gran variedad de granos para tus necesidades.</p>
+            <a href="productos.html#granos_section" class="btn-categoria">Ver más</a>
+        </div>
+        <div class="categoria-item">
+            <img src="https://i.ibb.co/nnM0VZN/Colorful-Illustrative-Organic-Grocery-Online-Shop-Logo-removebg-preview-1.png" alt="Lácteos">
+            <h3>Lácteos</h3>
+            <p>Lácteos frescos y de calidad para tu hogar.</p>
+            <a href="productos.html#lacteos_section" class="btn-categoria">Ver más</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h3>¿Cómo podemos ayudarte?</h3>
+        <p>Contactenos en cualquier momento</p>
+        <p><a href ="inicio.html" class="pie-pagina">Inicio </a> | <a href="about us.html" class="pie-pagina"> Sobre nosotros </a> | <a href="productos.html" class="pie-pagina"> Productos </a> | <a href="#ayuda" class="pie-pagina"> Ayuda</a> | <a href="mapa.html" class="pie-pagina">mapa del sitio</a> </p>
+        <p>&copy; 2024 .</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('notificationButton').addEventListener('click', function() {
+        alert("no tienes notificaciones pendiente");
+    });
+
+    window.addEventListener("scroll", function () {
+        const menuBar = document.querySelector(".menu-bar");
+        if (window.scrollY > 50) {
+            menuBar.classList.add("scrolled");
+        } else {
+            menuBar.classList.remove("scrolled");
+        }
+    });
+</script>
+
+</body>
+</html>

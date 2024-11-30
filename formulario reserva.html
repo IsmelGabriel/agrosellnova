@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrosell Nova - reservar</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!--(ALOJADOR DE IMAGENES)
+    
+   https://i.ibb.co/
+
+-->
+
+<!-- Barra superior -->
+<header class="top-bar">
+    <div class="header-content">
+        <img src="https://i.ibb.co/cvj3qCk/agrosell-logo-removebg-preview-1.png" alt="Agrosell Nova" class="logo">
+        <h1 class="menu-title">AGROSELL NOVA</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar....">
+            <button><i>🔎</i></button>
+        </div>
+        <span class="notification">
+            <button id="notificationButton" style="background-color: transparent; border: none; cursor: pointer;">
+                <i class="icon">🔔</i>
+            </button>
+        </span>
+            <span class="username"><a href="index.html" class="username">log in / log out</a></span>
+    </div>
+</header>
+
+<header id="top"> </header>
+
+<!-- Segunda barra -->
+<nav class="menu-bar">
+    <ul>
+        <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="categorias.html"><i class="fas fa-list"></i> Categorías</a></li>
+        <li><a href="reservas.html"><i class="fas fa-bookmark"></i> Reservas</a></li>
+        <li><a href="productos.html"><i class="fas fa-box icon"></i> Productos</a></li>
+        <li><a href="about us.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li><a href="#help"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="form-container">
+        <h2>Reserva tu producto</h2>
+        <form action="/reservar-producto" method="get">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="documento">Número de documento</label>
+                <input type="text" id="documento" name="documento" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto</label>
+                <select id="producto" name="producto">
+                    <option value="producto1">Cebolla</option>
+                    <option value="producto2">Tomate</option>
+                    <option value="producto2">Zanahoria</option>
+                    <option value="producto2">Fresa</option>
+                    <option value="producto2">Mango</option>
+                    <option value="producto2">Manzana</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad (kg)</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+            </div>
+            
+            <!-- Método de pago -->
+            <div class="form-group">
+                <label for="metodo_pago">Método de pago</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                    <option value="transferencia_bancaria">Transferencia Bancaria</option>
+                    <option value="pse">PSE</option>
+                    <option value="efectivo">Efectivo</option>
+                </select>
+            </div>
+
+            <button type="submit" class="confirmar-reserva-btn">Confirmar reserva</button>
+        </form>
+    </div>
+</main>
+
+<!-- Pie de página -->
+<footer>
+    <div class="footer-content">
+        <h3>¿Cómo podemos ayudarte?</h3>
+        <p>Contáctanos en cualquier momento.</p>
+        <p>
+            <a href="inicio.html" class="pie-pagina">Inicio</a> |
+            <a href="about us.html" class="pie-pagina">Sobre nosotros</a> |
+            <a href="productos.html" class="pie-pagina">Productos</a> |
+            <a href="#ayuda" class="pie-pagina">Ayuda</a> |
+            <a href="mapa.html" class="pie-pagina">Mapa del sitio</a>
+        </p>
+        <p>&copy; 2024.</p>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('notificationButton').addEventListener('click', function() {
+            alert("Notificaciones");
+        });
+
+        window.addEventListener("scroll", function () {
+            const menuBar = document.querySelector(".menu-bar");
+            if (window.scrollY > 50) {
+                menuBar.classList.add("scrolled");
+            } else {
+                menuBar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>
