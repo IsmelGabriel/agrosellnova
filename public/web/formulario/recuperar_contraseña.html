@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrosell nova - Recuperar contraseña</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <script src="../../js/mostrarNombre.js" defer></script>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="header-content">
+            <img src="https://i.ibb.co/cvj3qCk/agrosell-logo-removebg-preview-1.png" alt="Agrosell Nova" class="logo">
+            <h1 class="menu-title">AGROSELL NOVA</h1>
+            <div class="panel-option">
+                <button id="panelControl">
+                    <a href="panel_control.php" class="menu-icon"><i class="fa fa-cog"></i></a>
+                </button>
+            </div>
+            <a href="carrito.html" class="menu-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <span class="notification">
+                <button id="notificationButton">
+                    <i class="fas fa-bell" class="menu-icon"></i>
+                </button>
+            </span>
+            <span><a href="../../php/cerrarSesion.php" class="username" id="usuario">Iniciar
+                    sesión/Registrarse</a></span>
+            <a href="panel/perfil.php" class="menu-icon">
+                <i class="bi bi-person-circle" style="font-size: 30px;"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Segunda barra -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="../inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="../productos.html"><i class="fas fa-box icon"></i> Productos</a></li>
+            <li><a href="../categorias.html"><i class="fas fa-list"></i> Categorías</a></li>
+            <li><a href="../reservas.html"><i class="fas fa-bookmark"></i> Reservas</a></li>
+            <li><a href="../about_us.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+            <li><a href="../contactanos.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+            <li><a href="../ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        </ul>
+    </nav>
+    <nav class="menu-bar">
+        <ul>
+            <li>Bienvenido a Agrosell Nova. Actualmente estas cambiando tu contraseña.</li>
+        </ul>
+    </nav>
+
+    <main class="recuperar-contraseña-container">
+        <div class="recuperar-contraseña-form">
+            <h2>Recuperar Contraseña</h2>
+            <form id="recoveryForm" class="needs-validation" action="../../php/recuperacion.php" method="post"
+                novalidate>
+                <div class="recuperar-contraseña-formulario">
+                    <!-- usuario -->
+                    <label for="usuario" class="index-text">Usuario</label>
+                    <input type="text" id="usuario" name="USUARIO" class="form-control" placeholder="Ingresa tu usuario"
+                        required>
+                    <div class="invalid-feedback">
+                        Por favor, ingresa el usuario a recuperar.
+                    </div>
+                </div>
+
+                <div class="recuperar-contraseña-formulario">
+                    <!-- Correo electrónico -->
+                    <label for="email" class="index-text">Correo Electrónico</label>
+                    <input type="email" id="email" name="CORREO" class="form-control" placeholder="Ingresa tu correo."
+                        required>
+                    <div class="invalid-feedback">
+                        porfavor, ingresa tu correo electronico.
+                    </div>
+                </div>
+
+                <label for="password" class="recuperar-contraseña-formulario">Contraseña</label>
+                <input type="password" name="password" class="form-control" id="password"
+                    placeholder="Crea una contraseña" minlength="8" required>
+                <div class="invalid-feedback">
+                    La contraseña debe tener al menos 8 caracteres, incluir una letra mayúscula, un número y un carácter
+                    especial.
+                </div>
+
+                <label for="confirmPassword" class="recuperar-contraseña-formulario">Repite la contraseña</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Repite tu contraseña"
+                    required>
+                <div class="invalid-feedback">
+                    Las contraseñas no coinciden.
+                </div>
+
+                <div class="recuperar-contraseña-formulario">
+                    <!-- Botón de recuperación -->
+                    <button type="submit" class="recuperar-contraseña-btn">Recuperar Contraseña</button>
+                    <!-- Enlace a la página de inicio de sesión -->
+                    <a href="../index.html" class="btn btn-link text-success">Volver a iniciar sesión</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="../inicio.html">Inicio</a></li>
+                    <li><a href="../categorias.html">Categorías</a></li>
+                    <li><a href="../contacto.html">Contáctanos</a></li>
+                    <li><a href="../about us.html">Sobre nosotros</a></li>
+                    <li><a href="../mapa.html">Mapa del sitio</a></li>
+                    <li><a href="../404.html">Error 404</a></li>
+                    <li><a href="../500.html">Error 500</a></li>
+                    <li><a href="../Dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📍 Dirección: Calle Principal #123</p>
+                <p>📞 Teléfono: +57 123 456 789</p>
+                <p>📧 Email: <a href="mailto:info@agrosellnova.com">info@agrosellnova.com</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Agrosell Nova. Todos los derechos reservados. <a href="terminos.html">Términos y
+                    condiciones</a></p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script de validación de Bootstrap
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault(); // Evitar el envío del formulario
+                        event.stopPropagation(); // Detener la propagación
+                    }
+                    form.classList.add('was-validated'); // Aplicar las clases de Bootstrap
+                }, false);
+            });
+        })();
+
+        (function () {
+            'use strict';
+
+            // Obtén todos los formularios con la clase "needs-validation"
+            var forms = document.querySelectorAll('.needs-validation');
+
+            // Evita el envío de formularios no válidos
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    var password = document.getElementById('password').value;
+                    var confirmPassword = document.getElementById('confirmPassword').value;
+
+                    // Expresión regular para validar la contraseña
+                    var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*\d)[A-Za-z\d!@#$%^&*]{8,}$/;
+
+                    if (!form.checkValidity() || !passwordRegex.test(password)) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        // Mostrar mensaje de error si la contraseña no cumple los requisitos
+                        if (!passwordRegex.test(password)) {
+                            document.getElementById('password').setCustomValidity("La contraseña debe tener al menos 8 caracteres, incluir una letra mayúscula, un número y un carácter especial.");
+                        } else {
+                            document.getElementById('password').setCustomValidity("");
+                        }
+                    }
+
+                    // Validar que las contraseñas coincidan
+                    if (password !== confirmPassword) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        document.getElementById('confirmPassword').setCustomValidity("Las contraseñas no coinciden.");
+                    } else {
+                        document.getElementById('confirmPassword').setCustomValidity("");
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos - Agrosell nova</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/mostrarNombre.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="header-content">
+            <img src="../img/logo.png" alt="Agrosell Nova" class="logo">
+            <h1 class="menu-title">AGROSELL NOVA</h1>
+            <div class="panel-option">
+                <button id="panelControl">
+                    <a href="panel/panel_control.php" class="menu-icon"><i class="fa fa-cog"></i></a>
+                </button>
+            </div>
+            <a href="carrito.html" class="menu-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <span class="notification">
+                <button id="notificationButton">
+                    <i class="fas fa-bell" class="menu-icon"></i>
+                </button>
+            </span>
+            <span><a href="../php/cerrarSesion.php" class="username" id="usuario">Iniciar sesión/Registrarse</a></span>
+            <a href="panel/perfil.php" class="menu-icon">
+                <i class="bi bi-person-circle" style="font-size: 30px;"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Segunda barra -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="productos.php"><i class="fas fa-box icon"></i> Productos</a></li>
+            <li><a href="categorias.html"><i class="fas fa-list"></i> Categorías</a></li>
+            <li><a href="reservas.html"><i class="fas fa-bookmark"></i> Reservas</a></li> 
+            <li><a href="about_us.html"><i class="fas fa-info-circle"></i> Sobre nosotros</a></li>
+            <li><a href="contactanos.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+            <li><a href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección de Contacto -->
+        <section id="contactactanos-section">
+            <div class="contactanos-titulo">
+                <h2>Contáctanos</h2>
+            </div>
+
+            <div class="contactanos-descripcion">
+                <h1>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</h1>
+            </div>
+
+            <div class="contactanos-formulario">
+                <!-- Formulario de contacto -->
+                <form action="../php/guardar_pqrs.php" method="POST" class="contact-form needs-validation" novalidate>
+                    <div class="contactanos-form-info">
+                        <label for="NOMBRE">Nombre</label>
+                        <input type="text" id="nombre" name="NOMBRE" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Por favor, ingrese su nombre.
+                        </div>
+                    </div>
+
+                    <div class="contactanos-form-info">
+                        <label for="CORREO">Correo Electrónico</label>
+                        <input type="email" id="email" name="CORREO" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Por favor, ingrese un correo electrónico válido.
+                        </div>
+                    </div>
+
+                    <div class="contactanos-form-info">
+                        <label for="MENSAJE">Mensaje</label>
+                        <textarea id="mensaje" name="MENSAJE" class="form-control" rows="4" required></textarea>
+                        <div class="invalid-feedback">
+                            Por favor, ingrese un mensaje.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="contactanos-form-enviar">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contactanos-mapa">
+                <h3>Visítanos</h3>
+                <!-- Insertar el código del mapa de Google aquí -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d403.23384276401777!2d-74.06327658961742!3d4.651868959898182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a45d9f1654b%3A0x3d69138572d157f2!2sSENA%20-%20Centro%20De%20Servicios%20Financieros!5e1!3m2!1ses!2sco!4v1743798096659!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contactanos-info">
+                <h3>Información de contacto</h3>
+                <p>Dirección: Calle Ficticia 123, Ciudad, País</p>
+                <p>Teléfono: +123 456 789</p>
+                <p>Correo electrónico: contacto@agrosellnova.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="about_us.html">Sobre nosotros</a></li>
+                    <li><a href="mapa.html">Mapa del sitio</a></li>
+                    <li><a href="404.html">Error 404</a></li>
+                    <li><a href="500.html">Error 500</a></li>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📍 Dirección: Calle Principal #123</p>
+                <p>📞 Teléfono: +57 123 456 789</p>
+                <p>📧 Email: <a href="mailto:info@agrosellnova.com">info@agrosellnova.com</a></p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Agrosell Nova. Todos los derechos reservados. <a href="terminos.html">Términos y condiciones</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Validación de formulario
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault(); // Evitar el envío del formulario
+                        event.stopPropagation(); // Detener la propagación
+                    }
+                    form.classList.add('was-validated'); // Aplicar las clases de Bootstrap
+                }, false);
+            });
+        })();
+
+        document.getElementById('notificationButton').addEventListener('click', function() {
+            alert("No tienes notificaciones pendientes");
+        });
+    
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func.apply(this, args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+    
+        window.addEventListener("scroll", debounce(function () {
+            const menuBar = document.querySelector(".menu-bar");
+            if (window.scrollY > 50) {
+                menuBar.classList.add("scrolled");
+            } else {
+                menuBar.classList.remove("scrolled");
+            }
+        }, 100));
+    </script>
+
+</body>
+</html>
